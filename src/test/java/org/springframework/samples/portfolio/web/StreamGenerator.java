@@ -22,7 +22,8 @@ public class StreamGenerator {
     private final QuoteService.StockQuoteGenerator quoteGenerator = new QuoteService.StockQuoteGenerator();
     private final Logger log = LoggerFactory.getLogger(getClass());
 
-    @Test
+    // enable this if you need to publish message onto local rabbitmq.
+//    @Test
     public void generate_price_update() throws IOException, TimeoutException, InterruptedException {
         final Connection connection = factory.newConnection();
         final Channel channel = connection.createChannel();
